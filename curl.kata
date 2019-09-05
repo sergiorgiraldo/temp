@@ -1,0 +1,10 @@
+curl https://httpbin.org
+curl https://httpbin.org/anything
+curl -X POST https://httpbin.org/anything # POST
+curl https://httpbin.org/anything?value=panda # Query string
+curl https://www.google.com/robots.txt | more # get a file
+curl https://httpbin.org/anything -H "User-Agent: elephant" # send something in header
+curl -X DELETE https://httpbin.org/anything # another verb
+curl -i https://httpbin.org/anything # get response headers
+curl -X POST https://httpbin.org/anything --data "{\"value\":\"panda\"}"
+curl -X POST https://httpbin.org/anything --data @args.json
