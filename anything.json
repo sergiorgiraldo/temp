@@ -1,0 +1,16 @@
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "identity", 
+    "Host": "httpbin.org", 
+    "User-Agent": "HTTPie/1.0.3"
+  }, 
+  "json": null, 
+  "method": "GET", 
+  "origin": "200.221.128.95, 200.221.128.95", 
+  "url": "https://httpbin.org/anything"
+}

@@ -17,14 +17,26 @@ curl -H "Content-Type:application/json" -X POST https://httpbin.org/anything --d
 curl -H "Accept-Encoding: gzip" https://httpbin.org/anything #treat response as zip, use --output <FILE> to save
 curl -H "Content-Type:application/json" -X POST https://httpbin.org/anything --data @big.json
 curl http://example.com/imgs/[01-03].jpg -o "#1.jpg" # save 3 files
+curl -H "Accept:image/png" https://httpbin.org/image --output foo.png
+curl -H "Accept:image/*" https://httpbin.org/image --output foo.gif
+curl -H "Accept:text/xml" https://httpbin.org/image #get a response indicating which accepts are acceptable
+curl -X PUT https://httpbin.org/anything --data "{\"value\":\"panda\"}"
+curl https://httpbin.org/status/404
+curl -i https://httpbin.org/status/404
+curl https://httpbin.org/status/418
+curl -i https://httpbin.org/status/418
+curl -u usr:pwd https://httpbin.org/anything
 
-##httpie
+##httpie , it is slower, it is clear. but it is easier to write 
 
 http https://httpbin.org
 http https://httpbin.org/anything
-http post https://httpbin.org/anything
+http POST https://httpbin.org/anything
 http https://httpbin.org/anything value=panda amount=10 #query string
 http https://httpbin.org/anything User-Agent:elephant #set something in header
 http https://httpbin.org/anything User-Agent:elephant MyHeader:blah #set something in header
 http https://httpbin.org/anything animal=panda zoo=ny #json
 http https://httpbin.org/anything User-Agent:elephant animal=panda zoo=ny #json and header
+http https://httpbin.org/image accept:image/png --download
+http PUT httpbin.org/anything value=panda
+http --auth usr:pwd https://httpbin.org/anything
