@@ -10,8 +10,8 @@ curl https://www.google.com/robots.txt | more # get a file
 curl https://httpbin.org/anything -H "User-Agent: elephant" # send something in header
 curl -X DELETE https://httpbin.org/anything # another verb
 curl -i https://httpbin.org/anything # get response headers
-# powershell does not work well with json payloads
-curl -X POST https://httpbin.org/anything --data "{\"value\":\"panda\"}"
+curl -v https://httpbin.org/anything # get response and request headers
+curl -X POST https://httpbin.org/anything --data "{\"value\":\"panda\"}" # powershell does not work well with json payloads
 curl -X POST https://httpbin.org/anything --data @args.json 
 curl -H "Content-Type:application/json" -X POST https://httpbin.org/anything --data "{\"value\":\"panda\"}" #interpret as json
 curl -H "Accept-Encoding: gzip" https://httpbin.org/anything #treat response as zip, use --output <FILE> to save
