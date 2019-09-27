@@ -26,6 +26,7 @@ curl -i https://httpbin.org/status/404
 curl https://httpbin.org/status/418
 curl -i https://httpbin.org/status/418
 curl -u usr:pwd https://httpbin.org/anything
+curl -X POST https://maker.ifttt.com/trigger/{event}/with/key/bieOqv3cpXXJPDZWpSwGT8m7_V3bR3UgIr7TtnXVlGC #trigger {event} in IFTTT webhook recipes
 
 ##httpie , it is slower, it is clear. but it is easier to write 
 
