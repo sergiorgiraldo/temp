@@ -23,3 +23,6 @@ awk -F'[;,-]' '{printf "|%-15s|%.2f|\n", $1, $4/2}' people.txt
 	simple math, controls decimal places	
 	
 awk -f people1.awk people.txt	
+
+awk -f .\contrib1.awk .\contrib.txt
+	Print the names of those who contributed between $75 and $200 in the first month.
