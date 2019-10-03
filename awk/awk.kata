@@ -26,3 +26,10 @@ awk -f people1.awk people.txt
 
 awk -f .\contrib1.awk .\contrib.txt
 	Print the names of those who contributed between $75 and $200 in the first month.
+	
+awk -F':' '{if ((($3+$4+$5)/3) > 200) {print $1, $2} }' .\contrib.txt
+	Print the names and phone numbers of those with an average monthly contribution greater than $200
+	
+awk -f student.awk student.txt
+	Notice each record is separated by two newlines (use RS parameter) and each field is in a newline (use FS parameter)
+	https://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/
